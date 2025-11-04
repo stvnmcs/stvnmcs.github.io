@@ -1,236 +1,324 @@
-/* General Styles */
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #1e1e2f;
-    color: #f4f4f4;
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+:root {
+    --newsprint: #F5F5F0;
+    --newsprint-dark: #E8E8E0;
+    --ink: #1A1A1A;
+    --ink-light: #4A4A4A;
+    --accent: #FF5500;
+    --border: #D0D0C8;
+}
+
+body {
+    background-color: var(--newsprint);
+    color: var(--ink);
+    font-family: 'Archivo', sans-serif;
+    line-height: 1.4;
+    overflow-x: hidden;
+    background-image: 
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03"><rect width="100" height="100" fill="none" stroke="black" stroke-width="2"/></svg>');
+}
+
+/* Zine container */
+.zine-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    position: relative;
 }
 
 /* Header */
-header {
-    background: #111;
-    padding: 20px;
-    text-align: center;
-}
-
-h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #ff9800;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Sections */
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    color: #ff9800;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 8px 16px;
-    background: #ff9800;
-    color: #1e1e2f;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: 0.3s ease;
-    font-size: 0.9rem;
-    width: auto;
-    max-width: 200px;
-}
-
-.btn:hover {
-    background: #e08700;
-}
-
-#hero {
+.zine-header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Hero */
+.hero-zine {
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.name-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+}
+
+.name-line {
+    display: block;
+}
+
+.hero-tags {
+    display: flex;
     justify-content: center;
-    height: 90vh;
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    text-align: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-#hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--ink);
+    background: var(--newsprint);
 }
 
-#hero p {
-    font-size: 1.2rem;
-    font-weight: 300;
+/* Section label */
+.section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--ink-light);
 }
 
-/* Projects Section */
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+/* About section */
+.about-zine {
+    margin-bottom: 6rem;
 }
 
-.project {
-    background: #252542;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s ease;
-}
-
-.project:hover {
-    transform: translateY(-5px);
-}
-
-.project img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.project h3 {
-    color: #ff9800;
-    margin: 10px 0;
-}
-
-.project p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.project .btn {
-    margin-top: 10px;
-}
-
-/* Contact Section */
-#contact {
-    text-align: center;
-    padding: 60px 20px;
+.about-content {
     max-width: 600px;
-    margin: auto;
 }
 
-.input-group {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-bottom: 15px;
+.about-statement {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+    color: var(--ink);
 }
 
-.input-group label {
-    font-weight: bold;
-    margin-bottom: 5px;
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
 }
 
-.input-group input,
-.input-group textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-.input-group input:focus,
-.input-group textarea:focus {
-    border-color: #ff9800;
-    outline: none;
-}
-
-.btn {
-    width: 100%;
-    padding: 10px;
-    background: #ff9800;
-    color: white;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #e08700;
-}
-
-.status-message {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #28a745;
-    display: none;
-}
-
-/* Social Media Links */
-.social-links {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social-links a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-}
-
-.social-links img {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease;
-}
-
-.social-links a:hover img {
-    transform: scale(1.2);
-}
-
-
-footer {
+.highlight-item {
     text-align: center;
-    padding: 15px;
-    background-color: #222;
-    color: white;
-    font-size: 0.9rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    background: var(--newsprint);
+}
+
+.highlight-number {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.highlight-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+}
+
+/* TÁCTICO section */
+.tactico-zine {
+    margin-bottom: 6rem;
+    padding: 3rem;
+    background: var(--newsprint-dark);
+    border: 2px solid var(--ink);
     position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
-#scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 5px;
-    background: #ff9800;
-    z-index: 1000;
-    transition: width 0.2s ease;
+.tactico-zine::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+    background: var(--accent);
+    z-index: -1;
 }
 
+.tactico-header {
+    margin-bottom: 2rem;
+}
+
+.tactico-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.tactico-statement {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.tactico-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.zine-link {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.zine-link:hover {
+    background: var(--accent);
+    color: var(--newsprint);
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid transparent;
+}
+
+/* Contact section */
+.contact-zine {
+    margin-bottom: 4rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.contact-item {
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--ink);
+    transition: all 0.3s ease;
+    background: var(--newsprint);
+}
+
+.contact-item:hover {
+    border-color: var(--ink);
+    background: var(--newsprint-dark);
+    transform: translateX(5px);
+}
+
+.contact-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: var(--ink-light);
+}
+
+.contact-detail {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Footer */
+.zine-footer {
+    border-top: 2px solid var(--ink);
+    padding-top: 2rem;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .zine-container {
+        padding: 4rem 1rem 2rem;
+    }
+
+    .zine-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .header-center {
+        position: relative;
+        left: auto;
+        transform: none;
+    }
+
+    .hero-tags {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .tactico-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-text {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .tactico-zine {
+        padding: 2rem 1.5rem;
+    }
+
+    .tactico-header h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Print-inspired details */
+@media (max-width: 480px) {
+    .name-title {
+        font-size: 2.5rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-statement {
+        font-size: 1.1rem;
+    }
+}

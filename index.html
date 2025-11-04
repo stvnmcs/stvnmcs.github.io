@@ -3,115 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steven Macias - Portfolio</title>
+    <title>STEVEN MACIAS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@600&display=swap" rel="stylesheet">
-
 </head>
 <body>
-    <header>
-        <h1>Steven Macias</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero">
-        <h1>Hi, I'm Steven Macias</h1>
-        <p>Web Developer | Creative Director | Photographer</p>
-        <a href="#projects" class="btn">View My Work</a>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-             Versatile Full-Stack Software Engineer with a strong foundation 
-             in both front-end and back-end development, committed to delivering
-             high-performance, user-centric solutions. With a keen eye for design 
-             and an innovative approach to problem-solving, I seamlessly blend technical 
-             expertise with creative vision, drawing from my experience as a 
-             Creative Director, Photographer, and Videographer. Known for my ability to
-             bridge the gap between technology and artistry, I bring a unique, multidisciplinary 
-             perspective to every project, ensuring functional, scalable, and visually compelling 
-             results. Additionally, as a trusted consultant, I excel at collaborating with cross-functional 
-             teams to drive business growth and deliver impactful digital experiences.
-        </p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <div class="project">
-                <img src="images/project.webp" alt="Project 1" loading="lazy">
-                <h3>Tactico 90</h3>
-                <p>A Tracker For Soccer Events Around New York City</p>
-                <a href="https://github.com/stvnmcs/tactico-90-men-stack" class="btn" target="_blank">View Project</a>
+    <!-- Main content -->
+    <div class="zine-container">
+        <!-- Header -->
+        <header class="zine-header">
+            <div class="header-center">
+                <span class="location">NEW YORK CITY</span>
             </div>
-    
-            <div class="project">
-                <img src="images/project.webp" alt="Project 2" loading="lazy">
-                <h3>Coin Toss</h3>
-                <p>Make Bets With Your Buddies App</p>
-                <a href="https://github.com/JosephCho29/coin-toss-frontend" class="btn" target="_blank">View Project</a>
+            <div class="header-right">
+                <span class="date" id="current-year"></span>
             </div>
-    
-            <div class="project">
-                <img src="images/project.webp" alt="Project 3" loading="lazy">
-                <h3>Horizon</h3>
-                <p> Virtual Travel Assistance App</p>
-                <a href="https://github.com/Phillipcostas/Horizon-Group" class="btn" target="_blank">View Project</a>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out for collaborations or inquiries.</p>
-        
-        <form id="contact-form" action="https://formspree.io/f/xzzezbyy" method="POST">
-            <div class="input-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+        <!-- Hero -->
+        <section class="hero-zine">
+            <h1 class="name-title">
+                <span class="name-line">STEVEN</span>
+                <span class="name-line">MACIAS</span>
+            </h1>
+            <div class="hero-tags">
+                <span class="tag">SOFTWARE ENGINEER</span>
+                <span class="tag">FOUNDER</span>
+                <span class="tag">CREATIVE DIRECTOR</span>
             </div>
-        
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-        
-            <div class="input-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-        
-            <button type="submit" class="btn">Send Message</button>
-            <p id="form-status" class="status-message"></p>
-        </form>
+        </section>
 
-        <div class="social-links">
-            <a href="https://www.instagram.com/stvnmcs/" target="_blank">
-                <img src="images/instagram.svg" alt="Instagram">
-            </a>
-            <a href="https://www.linkedin.com/in/stevenmacias222/" target="_blank">
-                <img src="images/inspire.svg" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/stvnmcs" target="_blank">
-                <img src="images/github.svg" alt="GitHub">
-            </a>
-        </div>
-        
-    </section>
+        <!-- About Section -->
+        <section class="about-zine">
+            <div class="section-label">ABOUT</div>
+            <div class="about-content">
+                <p class="about-statement">
+                    Software engineer and founder of TÁCTICO 90. Building digital experiences 
+                    that merge technical excellence with creative vision. Based in New York City, 
+                    creating at the intersection of technology and art.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-number">05+</span>
+                        <span class="highlight-text">Years Experience</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">50+</span>
+                        <span class="highlight-text">Projects Delivered</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">01</span>
+                        <span class="highlight-text">Software Studio</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Steven Macias. All rights reserved.</p>
-    </footer>
-    
+        <!-- TÁCTICO 90 Section -->
+        <section class="tactico-zine">
+            <div class="tactico-header">
+                <div class="section-label">STUDIO</div>
+                <h2>TÁCTICO 90</h2>
+            </div>
+            <div class="tactico-content">
+                <p class="tactico-statement">
+                    Software studio and creative agency based in New York City. 
+                    We build digital products, brands, and experiences that matter.
+                </p>
+                <div class="tactico-links">
+                    <a href="https://tactico90.com" class="zine-link" target="_blank">VIEW WORK →</a>
+                    <a href="https://instagram.com/tactico.90" class="zine-link" target="_blank">CONTACT →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-zine">
+            <div class="section-label">CONTACT</div>
+            <div class="contact-grid">
+                <a href="mailto:stevenmcs22@gmail.com" class="contact-item">
+                    <span class="contact-label">EMAIL</span>
+                    <span class="contact-detail">stevenmcs22@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/stevenmacias222/" class="contact-item" target="_blank">
+                    <span class="contact-label">LINKEDIN</span>
+                    <span class="contact-detail">/in/stevenmacias222</span>
+                </a>
+                <a href="https://github.com/stvnmcs" class="contact-item" target="_blank">
+                    <span class="contact-label">GITHUB</span>
+                    <span class="contact-detail">/stvnmcs</span>
+                </a>
+                <a href="https://instagram.com/stvnmcs" class="contact-item" target="_blank">
+                    <span class="contact-label">INSTAGRAM</span>
+                    <span class="contact-detail">@stvnmcs</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="zine-footer">
+            <div class="footer-text">
+                <span>BASED IN NEW YORK CITY</span>
+                <span>AVAILABLE FOR SELECT WORK</span>
+                <span>© <span id="footer-year"></span></span>
+            </div>
+        </footer>
+    </div>
+
     <script src="script.js"></script>
-    <div id="scroll-progress"></div>
-
 </body>
 </html>
