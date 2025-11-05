@@ -51,6 +51,72 @@ body {
     transform: translateX(-50%);
 }
 
+/* Mini Cube in Header */
+.header-right {
+    position: relative;
+}
+
+.mini-cube {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transform-style: preserve-3d;
+    animation: mini-rotate 15s infinite linear;
+    cursor: pointer;
+}
+
+.mini-face {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 85, 0, 0.1);
+    border: 1px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    backface-visibility: visible;
+}
+
+.mini-front {
+    transform: translateZ(20px);
+    background: rgba(255, 85, 0, 0.05);
+}
+
+.mini-right {
+    transform: rotateY(90deg) translateZ(20px);
+    background: rgba(255, 85, 0, 0.05);
+}
+
+.mini-top {
+    transform: rotateX(90deg) translateZ(20px);
+    background: rgba(255, 85, 0, 0.8);
+}
+
+@keyframes mini-rotate {
+    0% {
+        transform: rotateX(-15deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(-15deg) rotateY(360deg);
+    }
+}
+
+/* Mini cube hover effects */
+.mini-cube:hover {
+    animation-play-state: paused;
+}
+
+.mini-cube:hover .mini-front {
+    background: rgba(255, 85, 0, 0.1);
+}
+
+.mini-cube:hover .mini-right {
+    background: rgba(255, 85, 0, 0.1);
+}
+
 /* Hero */
 .hero-zine {
     margin-bottom: 6rem;
@@ -305,6 +371,30 @@ body {
 
     .tactico-header h2 {
         font-size: 2rem;
+    }
+
+    /* Adjust mini cube for mobile */
+    .mini-cube {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mini-face {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .mini-front {
+        transform: translateZ(15px);
+    }
+
+    .mini-right {
+        transform: rotateY(90deg) translateZ(15px);
+    }
+
+    .mini-top {
+        transform: rotateX(90deg) translateZ(15px);
     }
 }
 

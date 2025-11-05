@@ -1,6 +1,25 @@
 // Set current year automatically
-document.getElementById('current-year').textContent = new Date().getFullYear();
 document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+// Mini cube interaction
+const miniCube = document.querySelector('.mini-cube');
+if (miniCube) {
+    document.addEventListener('mousemove', (e) => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        
+        miniCube.style.transform = `rotateX(${-15 + y * 10}deg) rotateY(${x * 360}deg)`;
+    });
+
+    // Pause animation on hover
+    miniCube.addEventListener('mouseenter', function() {
+        this.style.animationPlayState = 'paused';
+    });
+
+    miniCube.addEventListener('mouseleave', function() {
+        this.style.animationPlayState = 'running';
+    });
+}
 
 // About item interactions
 document.querySelectorAll('.highlight-item').forEach(item => {
