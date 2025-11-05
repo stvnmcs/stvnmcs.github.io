@@ -1,4 +1,5 @@
 // Set current year automatically
+document.getElementById('current-year').textContent = new Date().getFullYear();
 document.getElementById('footer-year').textContent = new Date().getFullYear();
 
 // Mini cube interaction
