@@ -108,7 +108,7 @@ body {
 
 /* Mini cube hover effects */
 .mini-cube:hover {
-    animation-play-state: paused;
+    animation-playState: paused;
 }
 
 .mini-cube:hover .mini-front {
@@ -211,9 +211,9 @@ body {
     color: var(--ink-light);
 }
 
-/* TÁCTICO section */
+/* TÁCTICO 90 section */
 .tactico-zine {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     padding: 3rem;
     background: var(--newsprint-dark);
     border: 2px solid var(--ink);
@@ -247,6 +247,26 @@ body {
     line-height: 1.5;
     margin-bottom: 2rem;
     max-width: 500px;
+}
+
+/* TÁCTICO Web Studios section */
+.webstudios-zine {
+    margin-bottom: 6rem;
+    padding: 3rem;
+    background: var(--newsprint);
+    border: 2px solid var(--accent);
+    position: relative;
+}
+
+.webstudios-zine::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+    background: rgba(255, 85, 0, 0.1);
+    z-index: -1;
 }
 
 .tactico-links {
@@ -379,7 +399,8 @@ body {
         text-align: center;
     }
 
-    .tactico-zine {
+    .tactico-zine,
+    .webstudios-zine {
         padding: 2rem 1.5rem;
     }
 
@@ -424,6 +445,10 @@ body {
     }
     
     .about-statement {
+        font-size: 1.1rem;
+    }
+    
+    .tactico-statement {
         font-size: 1.1rem;
     }
 }

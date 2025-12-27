@@ -79,7 +79,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 console.log(`%c
-STEVEN MACIAS / TÁCTICO 90
+STEVEN MACIAS / TÁCTICO
 NEW YORK CITY
 
 `, 'font-family: "Archivo"; color: #FF5500; font-size: 14px; background: #F5F5F0; padding: 10px;');
